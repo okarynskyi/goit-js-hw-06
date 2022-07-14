@@ -12,3 +12,16 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const ulList = document.querySelector(".gallery");
+
+const listMaker = images.map(image => `<li><img src="${image.url}" alt="${image.alt}" class="imgStyle" height="120px"></li>`).join("")
+
+ulList.style.padding = "20px";
+ulList.style.display = "flex";
+ulList.style.justifyContent = "space-around";
+ulList.style.borderRadius = "4px";
+ulList.style.backgroundColor = "#2196f3";
+
+ulList.insertAdjacentHTML("afterbegin", listMaker);
