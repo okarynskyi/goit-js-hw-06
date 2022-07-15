@@ -18,9 +18,8 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  boxes.innerHTML = "";
+  boxes.innerHTML = " ";
 }
 
-createBtn.addEventListener("click", createBoxes(input.value))
-destroyBtn.addEventListener("click", destroyBoxes())
-console.log(input.value)
+createBtn.addEventListener("click", () => createBoxes(input.value))
+destroyBtn.addEventListener("click", destroyBoxes)
